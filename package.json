@@ -1,0 +1,13 @@
+{
+  "name": "JS-2007B",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ThanhTrieu/reactjs2007B.git",
+  "author": "Nguyen Thanh Trieu <trieunguyenthanh@admicro.vn>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "esm": "^3.2.25",
+    "node-fetch": "^2.6.1"
+  }
+}
