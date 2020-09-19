@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event JS</title>
+</head>
+<body>
+  <!-- bat su kien click cho button -->
+  <button onclick="clickMe();">click me</button>
+  <button ondblclick="dbClickMe();">db Click</button>
+  <br><br>
+  <input type="text" onfocus="focusInput();" onblur="blurInput();" />
+  <br><br>
+  <input type="text" onchange="changeText(this);" />
+  <br><br>
+  <input type="text" onkeydown="myKeydown(this);" onkeypress="myKeypress(this);" onkeyup="myKeyup(this);" />
+  <br><br>
+  <button onmousedown="myMousedown();" onmouseup="myMouseup();">mouse</button>
+  <br><br>
+  <div style="width:300px; height: 300px; border: 1px solid red"
+  onmousemove="myMouseMove();"></div>
+  <br>
+  <div style="width:300px; height: 300px; border: 1px solid blue" onmouseover="myMouseOver();" onmouseout="myMouseOut();"></div>
+  <br/>
+  <img src="https://cdn.tgdd.vn/Products/Images/42/200533/iphone-11-pro-max-green-400x400.jpg" alt="" width="400" height="400" onmouseover="zoomInImg(this)" onmouseout="zoomOutImg(this)">
+  <br><br>
+  <input onkeydown="keyCodeInput(event);" />
+
+  <script type="text/javascript">
+    function keyCodeInput(e){
+      if(e.keyCode == 32){
+        console.log('ban vua bam vao nut cach');
+      }
+    }
+    function zoomInImg(obj){
+      obj.width = 800;
+      obj.height = 800;
+    }
+    function zoomOutImg(obj){
+      obj.width = 400;
+      obj.height = 400;
+    }
+    function myMouseOver(){
+      console.log('chuot di chuyen vao ben trong the div');
+    }
+    function myMouseOut(){
+      console.log('chuot di chuyen ra ngoai the div');
+    }
+    function myMouseMove(){
+      console.log('chuot dang di chuyen');
+    }
+    function myMouseup(){
+      console.log('ban vua nha tay khoi con chuot');
+    }
+    function myMousedown(){
+      console.log('ban vua bam vao con chuot');
+    }
+
+    function myKeydown(obj){
+      console.log(obj.value + ' tay nhan xuong');
+    }
+
+    function myKeyup(obj){
+      console.log(obj.value + ' tay roi ban phim');
+    }
+
+    function myKeypress(obj){
+      console.log(obj.value + ' tay dang giu ban phim');
+    }
+
+    function changeText(obj) {
+      console.log(obj.value);
+    }
+    
+    function blurInput(){
+      console.log('su kien blur vua xay ra')
+    }
+    function focusInput(){
+      console.log('hien tuong focus vua xay tren');
+    }
+
+    function clickMe() {
+      alert('Ban vua click vao toi !');
+    }
+    function dbClickMe(){
+      console.log('ban vua db click vao toi');
+    }
+  </script>
+</body>
+</html>
